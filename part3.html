@@ -1,0 +1,51 @@
+<script type="text/javascript">
+	var students = []; //an empty array. an array with no indicies
+	var student = {}; //This is an object that has no define properties
+	console.log(student.name);
+	student.name = "casey";
+	console.log(student.name)
+	student.name = "casey";
+	student.age = 24;
+	student.gender = 'Male'
+	console.log(student);
+	var student2 = {
+		name: "Anna",
+		gender: "Female",
+		favoriteLanguage: "JS",
+	}
+	console.log(student2.favoritelanguage);
+
+	var student3 = {
+		name: "Andy",
+		languages: [
+		"Javascript",
+		"Python",
+		"Node",
+		"GoLang",
+		],
+		skillLevel: {
+			javascript: "Excellent",
+			python: "Beginner",
+			node: "Warrior",
+			goLang: "Novice",
+
+		},
+		rightHanded: true,
+		sayHello: function(){
+			console.log("Hello, " +this.name);
+		}
+
+	}
+	students.push(student, student2, student3);
+	console.log(students);
+
+	for(var i = 0; i < students.length; i++){
+		console.log(students[i])
+	}
+</script>
+
+
+
+
+
+

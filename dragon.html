@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Fight the Dragon
+	</title>
+</head>
+<body>
+
+	<div id="game">
+
+		<img name="dragon" src="dragon.png">
+		<div>You encounted a dragon. Do you fight?
+		<button>Fight</button><button>Flee</button>
+		</div>
+		<img name="hero" src="https://upload.wikimedia.org/wikipedia/en/3/34/Frodo.jpg">
+		<img name="die1" src="d1.gif">
+		<img name="die2" src="d1.gif">
+
+		<input type="button" onclick="rollDice();" value="Roll the dice!">
+
+		<div id="userRoll"></div>
+
+	</div>
+
+	<script type="text/javascript">
+		
+	function rollDice(){
+		// console.log("test");
+		var randomDie1 = Math.ceil(Math.random() * 6);
+		var randomDie2 = Math.ceil(Math.random() * 6);
+		console.log(randomDie1);
+		console.log(randomDie2);
+		document.images.die1.src = "d" + randomDie1 + ".gif";
+		document.images.die2.src = "d" + randomDie2 + ".gif";
+		document.getElementById('userRoll').innerHTML = randomDie1 + randomDie2;
+		if(randomDie1 +randomDie2 > 8){
+			document.images.dragon.src= "https://digitalambler.files.wordpress.com/2013/01/dead_dragon_soldier.jpg"
+		}else{
+			document.images.hero.src= "http://newboards.theonering.net/forum/gforum/perl/gforum.cgi?do=post_attachment;postatt_id=3039;guest=177864260"
+		}
+	}
+	</script>
+
+</body>
+</html>

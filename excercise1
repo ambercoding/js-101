@@ -1,0 +1,10 @@
+<script type="text/javascript">
+	var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
+	var response = prompt("What is your name?");
+	if(response == daysOfWeeks[0] || response == daysOfWeeks[1] || response == daysOfWeeks[2] || response == daysOfWeeks[3]){
+		console.log("You are in the class!")
+	}else{
+		daysOfWeeks.push(response);
+		console.log("you are now in the class");
+		console.log(daysOfWeeks);
+</script>
