@@ -105,13 +105,13 @@ function Player(name, position, avgM, avgP, starter){
   this.reportPPM = function(){
     return this.avgP / this.avgM;
   }
+}
 
-// Player.protoype.species = "human";
+Player.protoype.species = "human";
 // Player.prototype.reportPPM = function(){
 //   return this.avgP / this.avgM;
 // }
 
-}
 var player1 = new Player('Paul Millsap', 'PF',36, 16.4, 9.4, true);
 var player2 = new Player('Jeff Teague', 'PG', 28.6, 15.6, 1.9, true);
 

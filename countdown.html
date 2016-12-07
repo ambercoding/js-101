@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Countdown Timer</title>
+</head>
+	<style type="text/css" media="screen">
+		#timer{
+			font-size: 72px;
+		}
+	</style>
+<body>
+
+<div id="timer">---</div>
+
+	<div id ="timer">---</div>
+	<button onclick="pause()">Pause timer</button>
+	<button onclick="start()">start timer</button>
+
+<script type="text/javascript">
+	
+
+	var now = Date.now();
+	// console.log(now/1000);
+	var christmasDay = new Date('December 25, 2016 00:00').getTime();
+	// console.log(christmasDay/1000)
+	var secondsTillChristmas = Math.floor((christmasDay - now) / 1000);
+	// console.log(secondsTillChristmas);
+	var minutesTillChristmas = secondsTillChristmas / 60;
+	// console.log(minutesTillChristmas);
+	var hoursTillChristmas = minutesTillChristmas / 60;
+	var daysTillChristmas = hoursTillChristmas / 24;
+
+	var timerDiv = document.getElementById('timer');
+	timerDiv.innerHTML = secondsTillChristmas + " seconds till Christmas!";
+
+	function updateCounter(){
+		// get the new timestamp 
+		var now = Date.now();
+		var newSecondsTillChristmas = (christmasDay - now) / 10;
+		timerDiv.innerHTML = newSecondsTillChristmas + " microseconds till Christmas!";
+	}
+	function pause(){
+		clearInterval(counterInterval);
+	}
+	function start(){
+		counterInterval = setInterval(updateCounter, 10)
+	}
+	var counterInterval;
+// 1. update the counter each new second
+// 2 recalculate the new distance between now and then
+// 3. after recalculating update the html with new number
+	
+
+</script>	
+
+</body>
+</html>
