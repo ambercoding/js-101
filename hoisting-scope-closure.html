@@ -1,0 +1,19 @@
+<!-- scope- determines what can see a variable -->
+<!-- -global -->
+<!-- local -->
+
+<!-- a parent passes all its information down.
+a child does not pass its information up
+a child can see its parents but not vice versa
+by up/ down we mean functions 
+if you dont have a var JS will assume its global(dont do that)-->
+<script type="text/javascript">
+	function child(){
+		a = 4;
+		console.log("a's value inside the function",a)
+	}
+	var a = 2;
+	console.log("a's value outside the function",a)
+	child();
+	console.log("a's value outside the function",a)
+</script>
