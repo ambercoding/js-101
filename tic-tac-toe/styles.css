@@ -1,5 +1,6 @@
 h1{
 	text-align: center;
+	color: #96C0CE;
 }
 #board{
 	max-width: 640px;
@@ -9,14 +10,36 @@ h1{
 }
 .square{
 	width: 30%;
-	background-color: white;
+	background-color: #74828F;
 	padding: 30px 0;
 	box-sizing:  border-box;
 	float: left;
 	font-size: 80px;
-	border: 2px solid black;
+	border: 2px solid #C25B56;
+	transition: all 2s;
+	border-radius: 10% ;
 }
 .winning-square{
-	background-color: green !important;
-	color: red !important;
+	background-color: #96C0CE !important;
+	color: black !important;
+}
+.square:hover{
+	background-color: #525564;
+	border-radius: 50%;
+}
+#message{
+	font-size: 32px;
+	color: black;
+	text-align: center;
+	transition: all 5s;
+}
+body{
+	background-color: #C25B56;
+}
+#tryagaindiv{
+	text-align: center;
+}
+#tryagain{
+	border-radius: 10px;
+
 }
